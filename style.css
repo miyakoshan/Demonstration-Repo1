@@ -1,0 +1,203 @@
+h1{
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 5px rgb(90, 27, 27);
+}
+
+.title{
+    color: hsl(44, 100%, 50%);
+}
+
+#italic{
+    color: red;
+}
+
+.nav-wrapper{
+    background-color: blue;
+    text-align: center;
+}
+
+.container{
+    color:green;
+    border: 5px solid brown;
+    margin:5px 20px 5px 20px;
+    padding:50px 40px 50px 40px; 
+}
+
+.container2{
+    text-align: right;
+    border:5px dotted pink;
+    padding:40px 10px 40px 10px;
+    margin:5px 0px 3px 10px;
+}
+
+.box{
+   display: inline-block;
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 10px ;
+    /*
+    box-shadow: 8px 8px 30px 40px grey inset;*/
+}
+
+/*Keyframe is for the animation and  fadeMe is the name of the keyframe*/
+@keyframes fadeMe{
+    /*0% = the beginner of the animation*/
+    0%{
+        opacity:1; /*we can see the box while the box start moving*/
+    }
+
+    100%{
+        opacity:0% /* the animation stop*/
+    }
+}
+
+@keyframes rotation{
+    0%{transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes getBigger{
+    0%{transform: scale(1);}
+    50%{transform: scale(2);}
+    100%{transform:scale(.5);}
+}
+
+@keyframes changeColor{
+   0%{background-color:grey;}
+   25%{background-color:yellow;}
+   502%{background-color:red;}
+   75%{background-color:purple;}
+   100%{background-color: peru;}
+} 
+
+@keyframes moveBox{
+    0%{left: 0px; top: 0px;}
+    25%{left: 100px; top: 0px;} /*Move to the right 100px*/
+    50%{left: 100px; top: 200px;}/*Move to the right 100px and move away from the top 200px */
+    75%{left: 0px; top: 200;} /* left going back to 0px */
+    100%{left: 0px; top: 0px;} /*go back to 0px 0px*/
+}
+
+#box1{
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-timing-function: linear ; /*only one cycle*/
+    animation-iteration-count: infinite;
+}
+
+#box2{
+    animation-name: rotation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+    background-image: radial-gradient(circle,pink,yellow,purple,black);
+}
+
+#box3{
+    animation-name: getBigger;
+    animation-duration: 6s;
+    animation-iteration-count: 8s;
+    animation-timing-function:ease-in;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+#box4{
+    animation: changeColor 3s 2s forwards;
+}
+
+#box5{
+    animation: moveBox 5s 3s;
+    background:red;
+    position:relative;
+    animation-iteration-count: infinite;
+}
+
+#box6{
+    top: 100px;
+    left: 200px;
+    position: relative;
+}
+
+html{
+    /*
+    background-image: url(kitten1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+
+    /*background-image: linear-gradient(to right,blue , green , purple);*/
+
+   /* background-image: radial-gradient(blue , green , purple);*/
+    
+}
+
+
+.circle-img{
+    border-radius: 50%;
+}
+
+img{
+    box-shadow: 10px 10px 5px grey;
+}
+
+nav{
+    background-color: aquamarine;
+    text-align: center;
+}
+
+a{
+    text-decoration-line:none ;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    padding: 30px;
+}
+
+.flex{
+    margin: 30px;
+    border:3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*padding: 100px;*/
+}
+
+.contact-box{
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    margin: 30px;
+}
+
+.input-field{
+    margin: 20px;
+}
+
+
+form input{
+    display: block;
+    margin: 30px;
+}
+
+form textarea{
+    display: block;
+    margin: 30px;
+}
+
+form button{
+    display: block;
+    margin: 30px;
+}
+
